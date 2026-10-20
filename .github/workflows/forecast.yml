@@ -1,5 +1,11 @@
 name: Surf forecast and Pages
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'scripts/**'
+      - '.github/workflows/forecast.yml'
   schedule:
     - cron: '0 1,11 * * *'
   workflow_dispatch:
